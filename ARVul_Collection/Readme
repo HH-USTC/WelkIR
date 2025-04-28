@@ -1,4 +1,3 @@
-we construct the ARVul dataset using the ARVO project infrastructure. The ARVO project reproduces 5,001 memory vulnerabilities from 273 projects, providing patches and Docker environments to facilitate vulnerability replication. 
 we use Bear to capture the compilation commands for each file in ARVO projects and recompile them with adjusted Clang flags (e.g., \texttt{-S}, \texttt{-emit-llvm}) to generate the corresponding LLVM IR files.
 
 
