@@ -1,0 +1,75 @@
+
+# task: "pretrain"
+task: "vulclassify"
+# task: "vuldetect"
+
+
+pretrain_model_savepath: "pretrain_model"
+WelkirModel_path: "WelkirModel_Save" 
+##################################ARVO##################################
+dataset_root: "../WelkDataset/dataset"
+dataset_split: "ARVO"
+IR_Ptrtrain_Graph_folder: "../WelkDataset/ARVO/PreTrain_Graph" 
+IR_Train_Graph_folder: "../WelkDataset/Welk_Train_dataset"
+IR_Validation_Graph_folder: "../WelkDataset/Welk_Validation_dataset"   
+IR_Test_Graph_folder: "../WelkDataset/Welk_test_dataset" 
+#######################Model configuration##################################
+vocab_root: "vocabs"
+tokenizer_dir: "tokenizer"
+cfg_vocab_name: "cfg_type_vocab.json"
+dfg_vocab_name: "dfg_type_vocab.json"
+rdg_vocab_name: "rdg_type_vocab.json"
+num_cfg_flow_types: 21
+num_dfg_flow_types: 23
+num_rdg_flow_types: 68
+add_flow_self_attn_bias: "true"
+attention_probs_dropout_prob: 0.1
+inst_hidden_size: 768
+inst_intermediate_size: 3072
+bos_token_id: 0
+classifier_dropout: null
+eos_token_id: 2
+hidden_act: "gelu"
+hidden_dropout_prob: 0.1
+hidden_size: 768
+initializer_range: 0.02
+intermediate_size: 3072
+layer_norm_eps: "1e-12"
+max_extra_input_length: 16
+model_type: "WelkIR"
+num_attention_heads: 12
+num_inst_attention_heads: 12
+num_inst_hidden_layers: 6
+num_hidden_layers: 6
+pad_token_id: 1
+position_embedding_type: "absolute"
+type_vocab_size: 3
+use_cache: "true"
+use_data_cache: "true"
+vocab_size: 30000
+max_inst_position_embeddings: 520   
+max_position_embeddings: 520 
+max_num_inst: 500    #  maximum number of instructions per sample is 256 or 500.
+min_num_inst: 16     #  minimum number of instructions per sample.
+max_group: 32        # maximum number of groups per sample is 16 or 32
+inst_window_size: 256 #  sliding window is applied with a window size 
+group_max_inst_count: 64   # maximum number of instructions per group is 128 or 64
+max_token_per_group: 500   # maximum number of instruction tokens per group.
+max_inst_input_length: 512 # number of tokens per group
+learning_rate: "1e-4"
+warmup_steps: 0.03
+random_seed: 42
+weight_decay: 0.0
+max_grad_norm: 1.0
+logging_steps: 100
+# num_epochs: 10
+num_epochs: 10
+patience: 5
+single_thread_parsing: "true"
+problem_type: "single_label_classification"
+max_train_steps: null
+num_labels: 2
+DataLoader_num_workers: 2
+num_devices: 8
+batch_size: 8
+gradient_accumulation_steps: 2

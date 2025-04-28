@@ -1,0 +1,61 @@
+task: "vulclassify"
+WelkirModel_path: "/data/huanghao/code/Mywork/WelkIR/01_WelkirModel_Save"
+VulclassifyModel_path: "vulclassifyModel_Save"
+save_eval_dir: "vulclassify_save_eval_dir"
+vocab_root: "vocabs"
+tokenizer_dir: "tokenizer"
+cfg_vocab_name: "cfg_type_vocab.json"
+rdg_vocab_name: "rdg_type_vocab.json"
+dfg_vocab_name: "dfg_type_vocab.json"
+use_data_cache: "true"
+dataset_split: "train"
+# dataset_root: "../WelkDataset/dataset/juliet/"
+# IR_Train_Graph_folder: "../WelkDataset/Juliet/Train_Graph"
+# IR_Validation_Graph_folder: "../WelkDataset/Juliet/Validation_Graph"   
+# IR_Test_Graph_folder: "../WelkDataset/Juliet/test_Graph" 
+dataset_root: "/data/huanghao/code/Mywork/WelkDataset/dataset/symbolic_Juliet_ll_files/"
+IR_Train_Graph_folder: "/data/huanghao/code/Mywork/WelkDataset/symbolic_Juliet_ll_files/Train_Graph"
+IR_Validation_Graph_folder: "/data/huanghao/code/Mywork/WelkDataset/symbolic_Juliet_ll_files/Validation_Graph"   
+IR_Test_Graph_folder: "/data/huanghao/code/Mywork/WelkDataset/symbolic_Juliet_ll_files/test_Graph" 
+weight_decay: 0.0
+max_train_steps: null
+num_epochs: 15
+warmup_steps: 0.03
+patience: 9
+label_smoothing_factor: 0
+max_grad_norm: 1.0
+num_cfg_flow_types: 21
+num_dfg_flow_types: 23
+num_rdg_flow_types: 68
+add_flow_self_attn_bias: "true"
+attention_probs_dropout_prob: 0.1
+bos_token_id: 0
+classifier_dropout: null
+eos_token_id: 2
+pad_token_id: 1
+position_embedding_type: "absolute"
+type_vocab_size: 3
+use_cache: "true"
+use_data_cache: "true"
+vocab_size: 30000
+max_inst_position_embeddings: 520   
+max_position_embeddings: 520 
+max_num_inst: 500          # maximum number of instructions per sample is 256 or 500.
+inst_window_size: 256      #  sliding window is applied with a window size
+min_num_inst: 8            # minimum number of instructions per sample.
+group_max_inst_count: 64   # maximum number of instructions per group is 128 or 64
+max_token_per_group: 500   #  maximum number of instruction tokens per group.
+max_inst_input_length: 512 # number of tokens per group
+max_group: 32              # maximum number of groups per sample is 16 or 32
+single_thread_parsing: "true"
+metric_for_best_model: "acc"
+learning_rate: "1e-4"
+problem_type: "single_label_classification"
+return_dict: "true"
+only_prepare_vulclassify_dataset: False  # true or False
+only_test: true  # true or False
+DataLoader_num_workers: 2
+gradient_accumulation_steps: 2
+num_labels: 5   # number of labels to be detected
+num_devices: 8
+batch_size: 8
