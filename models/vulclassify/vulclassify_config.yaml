@@ -1,5 +1,5 @@
 task: "vulclassify"
-WelkirModel_path: "/data/huanghao/code/Mywork/WelkIR/01_WelkirModel_Save"
+WelkirModel_path: "WelkirModel_Save"
 VulclassifyModel_path: "vulclassifyModel_Save"
 save_eval_dir: "vulclassify_save_eval_dir"
 vocab_root: "vocabs"
@@ -13,10 +13,10 @@ dataset_split: "train"
 # IR_Train_Graph_folder: "../WelkDataset/Juliet/Train_Graph"
 # IR_Validation_Graph_folder: "../WelkDataset/Juliet/Validation_Graph"   
 # IR_Test_Graph_folder: "../WelkDataset/Juliet/test_Graph" 
-dataset_root: "/data/huanghao/code/Mywork/WelkDataset/dataset/symbolic_Juliet_ll_files/"
-IR_Train_Graph_folder: "/data/huanghao/code/Mywork/WelkDataset/symbolic_Juliet_ll_files/Train_Graph"
-IR_Validation_Graph_folder: "/data/huanghao/code/Mywork/WelkDataset/symbolic_Juliet_ll_files/Validation_Graph"   
-IR_Test_Graph_folder: "/data/huanghao/code/Mywork/WelkDataset/symbolic_Juliet_ll_files/test_Graph" 
+dataset_root: "../WelkDataset/dataset/symbolic_Juliet_ll_files/"
+IR_Train_Graph_folder: "../WelkDataset/symbolic_Juliet_ll_files/Train_Graph"
+IR_Validation_Graph_folder: "../WelkDataset/symbolic_Juliet_ll_files/Validation_Graph"   
+IR_Test_Graph_folder: "../WelkDataset/symbolic_Juliet_ll_files/test_Graph" 
 weight_decay: 0.0
 max_train_steps: null
 num_epochs: 15
