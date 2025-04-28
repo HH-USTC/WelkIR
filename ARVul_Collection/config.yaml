@@ -1,0 +1,17 @@
+project_type: "vul"
+share_file_folder: "~/code/ARVul_Collection/"   #  folder path shared with Docker.
+meta_folder: "ARVO-Meta-main/meta"
+CollectData_Folder: "Meta_CollectData"   
+Patches_Folder: "ARVO-Meta-main/patches"
+CollectLabels_Folder: "Meta_CollectData/meta_labels"
+opt_output_folder: "ARVul/OutputFunc"   
+IR_input_folder: "ARVul"   
+source_labels_folder: "ARVul/meta_labels"  
+Error_CollectLabels_Folder: "Meta_CollectData/result_label/really_failed"
+ARVO_Vul_project_IR_folder: "WelkDataset/Vul/Clang_IRFiles"
+ARVO_project_IR_folder: "WelkDataset/original_IRFiles"
+ARVO_Meta_folder: "ARVO-Meta-main/meta"
+ARVO_Vul_success_project_folder: "Meta_CollectData/Vul_result_label/success" 
+ARVO_Vul_project_meta_folder: "Meta_CollectData/Project_Meta" 
+ARVO_Vul_Collect_project_folder: "Collect_ALL_IR_Files"
+
