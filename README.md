@@ -13,3 +13,5 @@ WelkIR_Dataprocess is an LLVM pass that generates Control Flow Graphs (CFGs), De
 e.g.  opt -load llvm-project-release-12.x/llvm-build/lib/LLVM_WelkIR.so -WelkIR -labelFilename={json_label_file} -OutputPath={output_graph_path} -IRFile_Type={IRFile_Type} ll_file_path -enable-new-pm=0
 
 
+##  Evaluation
+PYTHONPATH="." python main.py
